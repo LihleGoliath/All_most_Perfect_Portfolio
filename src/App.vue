@@ -29,12 +29,12 @@ export default{
   overflow-x: hidden;
   overflow-y:hidden;
  @media(max-width:1200px) {
-  position: relative;
+  position: static;
   width: fit-content;
   max-width: max-content;
   height: fit-content;
   max-height: max-content;
-  overflow-y: scroll;
+
  }
 
 }
@@ -44,5 +44,9 @@ export default{
   box-sizing: border-box;
 }
 
-
+@media only screen and (max-width: 1200px) {
+  ::-webkit-scrollbar{
+    width: 0;
+  }
+}
 </style>

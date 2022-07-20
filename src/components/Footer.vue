@@ -24,7 +24,6 @@ export default {
 </script>
 <style lang="scss">
 section#footer{
-   position: fixed;
     background-color: #231F20;
     width: 100vw;
     text-align: center;

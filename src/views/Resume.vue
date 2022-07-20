@@ -28,7 +28,7 @@
 export default{
   data(){
     return{
-      img:'http://get.imglarger.com:8889/results/2unRO0l9_4x.jpg',
+      img:'https://i.postimg.cc/zGBsVgSN/IMG-20211019-WA0014-auto-x2.jpg',
       resumes:[
     {
         date:"2020",
@@ -71,6 +71,7 @@ width: 100vw;
   width: 100%;
   height: 100%;
   padding: 20px;
+  padding-left:0 ;
   margin: auto;
   display: flex;
   flex-direction: row-reverse;
@@ -195,4 +196,9 @@ width: 100vw;
         height: 10px;
         border-radius:20px ;
       }
+          @media only screen and(max-width:1200px) {
+       ::-webkit-scrollbar{
+      width:0;
+    }
+     } 
 </style>

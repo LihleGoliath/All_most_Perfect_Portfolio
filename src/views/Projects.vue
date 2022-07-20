@@ -1,75 +1,168 @@
 <template>
-<section id="about">
-  <div class="about">
-    <div class="about-img">
-      <img :src="img" alt="">
+<section id="Projects">
+  <div  class="Projects">
+    <div v-for="(project,index) in projects" :key="index"  class="Projects-img" :class="{active:active === index}">
+      <img :src="project.imgURL" alt="">
+      <h1>{{project.title}}</h1>
+      <a :href="project.github"><button>Github</button></a>  <a :href="project.live"><button>Live</button> </a>
+      <P>Techstack: {{project.techStack}}</P>
     </div>
-    <div class="about-text">
-      <h1>About Me</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem explicabo, in consectetur aliquam laboriosam earum omnis, nulla assumenda incidunt totam dolores aut atque cupiditate sunt, vel doloremque reiciendis tenetur unde ducimus! Accusantium numquam sequi voluptatibus, exercitationem praesentium vitae consequatur rerum vero animi nostrum obcaecati minus harum eaque accusamus, tempora dolorum asperiores explicabo placeat magnam. Quis, qui. Reiciendis quaerat nihil provident distinctio velit magnam quam, incidunt animi voluptas recusandae eveniet ipsum. Possimus id itaque minima laborum omnis sunt aspernatur nobis! Illo eos illum mollitia consequuntur aperiam asperiores magnam dolorem odit voluptates cum, unde quo est. Quae cumque magni molestias impedit eum quos voluptatibus. Quod fugit aperiam veritatis nostrum magnam. Hic ex aperiam veritatis ea voluptas? Consequatur nobis beatae at ducimus voluptate impedit nisi sed doloribus, dolores ipsam nihil, vitae deleniti accusantium consectetur ea sequi quibusdam, architecto totam amet? Rem, necessitatibus. Quibusdam rerum consectetur laborum recusandae aliquam, accusamus earum incidunt magni esse, aperiam dignissimos quo. Commodi ullam corrupti perspiciatis sit eos libero assumenda in? Voluptatem veritatis modi, sit iure expedita rerum eligendi pariatur nostrum, placeat odio corporis, temporibus tempore sequi. Iure, tempore quae excepturi, voluptatem facilis odio ipsa obcaecati deserunt debitis inventore impedit quam! Corporis veniam dolore neque saepe, dolorem quam numquam.</p>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem explicabo, in consectetur aliquam laboriosam earum omnis, nulla assumenda incidunt totam dolores aut atque cupiditate sunt, vel doloremque reiciendis tenetur unde ducimus! Accusantium numquam sequi voluptatibus, exercitationem praesentium vitae consequatur rerum vero animi nostrum obcaecati minus harum eaque accusamus, tempora dolorum asperiores explicabo placeat magnam. Quis, qui. Reiciendis quaerat nihil provident distinctio velit magnam quam, incidunt animi voluptas recusandae eveniet ipsum. Possimus id itaque minima laborum omnis sunt aspernatur nobis! Illo eos illum mollitia consequuntur aperiam asperiores magnam dolorem odit voluptates cum, unde quo est. Quae cumque magni molestias impedit eum quos voluptatibus. Quod fugit aperiam veritatis nostrum magnam. Hic ex aperiam veritatis ea voluptas? Consequatur nobis beatae at ducimus voluptate impedit nisi sed doloribus, dolores ipsam nihil, vitae deleniti accusantium consectetur ea sequi quibusdam, architecto totam amet? Rem, necessitatibus. Quibusdam rerum consectetur laborum recusandae aliquam, accusamus earum incidunt magni esse, aperiam dignissimos quo. Commodi ullam corrupti perspiciatis sit eos libero assumenda in? Voluptatem veritatis modi, sit iure expedita rerum eligendi pariatur nostrum, placeat odio corporis, temporibus tempore sequi. Iure, tempore quae excepturi, voluptatem facilis odio ipsa obcaecati deserunt debitis inventore impedit quam! Corporis veniam dolore neque saepe, dolorem quam numquam.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem explicabo, in consectetur aliquam laboriosam earum omnis, nulla assumenda incidunt totam dolores aut atque cupiditate sunt, vel doloremque reiciendis tenetur unde ducimus! Accusantium numquam sequi voluptatibus, exercitationem praesentium vitae consequatur rerum vero animi nostrum obcaecati minus harum eaque accusamus, tempora dolorum asperiores explicabo placeat magnam. Quis, qui. Reiciendis quaerat nihil provident distinctio velit magnam quam, incidunt animi voluptas recusandae eveniet ipsum. Possimus id itaque minima laborum omnis sunt aspernatur nobis! Illo eos illum mollitia consequuntur aperiam asperiores magnam dolorem odit voluptates cum, unde quo est. Quae cumque magni molestias impedit eum quos voluptatibus. Quod fugit aperiam veritatis nostrum magnam. Hic ex aperiam veritatis ea voluptas? Consequatur nobis beatae at ducimus voluptate impedit nisi sed doloribus, dolores ipsam nihil, vitae deleniti accusantium consectetur ea sequi quibusdam, architecto totam amet? Rem, necessitatibus. Quibusdam rerum consectetur laborum recusandae aliquam, accusamus earum incidunt magni esse, aperiam dignissimos quo. Commodi ullam corrupti perspiciatis sit eos libero assumenda in? Voluptatem veritatis modi, sit iure expedita rerum eligendi pariatur nostrum, placeat odio corporis, temporibus tempore sequi. Iure, tempore quae excepturi, voluptatem facilis odio ipsa obcaecati deserunt debitis inventore impedit quam! Corporis veniam dolore neque saepe, dolorem quam numquam.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem explicabo, in consectetur aliquam laboriosam earum omnis, nulla assumenda incidunt totam dolores aut atque cupiditate sunt, vel doloremque reiciendis tenetur unde ducimus! Accusantium numquam sequi voluptatibus, exercitationem praesentium vitae consequatur rerum vero animi nostrum obcaecati minus harum eaque accusamus, tempora dolorum asperiores explicabo placeat magnam. Quis, qui. Reiciendis quaerat nihil provident distinctio velit magnam quam, incidunt animi voluptas recusandae eveniet ipsum. Possimus id itaque minima laborum omnis sunt aspernatur nobis! Illo eos illum mollitia consequuntur aperiam asperiores magnam dolorem odit voluptates cum, unde quo est. Quae cumque magni molestias impedit eum quos voluptatibus. Quod fugit aperiam veritatis nostrum magnam. Hic ex aperiam veritatis ea voluptas? Consequatur nobis beatae at ducimus voluptate impedit nisi sed doloribus, dolores ipsam nihil, vitae deleniti accusantium consectetur ea sequi quibusdam, architecto totam amet? Rem, necessitatibus. Quibusdam rerum consectetur laborum recusandae aliquam, accusamus earum incidunt magni esse, aperiam dignissimos quo. Commodi ullam corrupti perspiciatis sit eos libero assumenda in? Voluptatem veritatis modi, sit iure expedita rerum eligendi pariatur nostrum, placeat odio corporis, temporibus tempore sequi. Iure, tempore quae excepturi, voluptatem facilis odio ipsa obcaecati deserunt debitis inventore impedit quam! Corporis veniam dolore neque saepe, dolorem quam numquam.</p>
-   </div>
+    <div class="Projects-text">
+    <div  v-for="(project,index) in projects" :key="index"  class="project-card" >
+    <div class="project-img">
+     <img :src="project.imgURL" alt=""/>
+    </div>
+      <h3>{{project.title}}</h3>
+    <button @click="On(index)">Full View</button>
+      
+    </div>
+      </div>
   </div>
 
 </section>
 </template>
 <script>
+
 export default{
   data(){
     return{
-      img:'http://get.imglarger.com:8889/results/2unRO0l9_4x.jpg',
       projects:[
     {
     title:"Font Gallery",
     imgURL:"https://i.postimg.cc/SQdTV9s1/font-gallery.png",
     github:"link",
-    live:"link"
+    live:"link",
+    techStack:"Html,CSS"
     },
     {
-        title:"Calculator",
-        imgURL:"https://i.postimg.cc/G3XKv17Z/Screenshot-2022-04-22-101154.png",
-        github:"link",
-        live:"link"
-        },
-        {
-            title:"Resturantly",
-            imgURL:"https://i.postimg.cc/LXK9y7yS/Screenshot-2022-05-31-115944.png",
-            github:"link",
-            live:"link"
-            }
-    ]
+     title:"Calculator",
+     imgURL:"https://i.postimg.cc/G3XKv17Z/Screenshot-2022-04-22-101154.png",
+     github:"link",
+     live:"link",
+    techStack:"Html,CSS"
+    },
+    {
+      title:"Restaurantly",
+      imgURL:"https://i.postimg.cc/LXK9y7yS/Screenshot-2022-05-31-115944.png",
+      github:"link",
+      live:"link",
+    techStack:"Html,CSS,Bootstrap"
+    },
+    {
+      title:"BMI Calculator",
+      imgURL:"https://i.postimg.cc/ZRRwwgZ2/BMI-calculator.png",
+      github:"link",
+      live:"link",
+    techStack:"Html,CSS,JavaScript"
+    },
+    {
+      title:"Temp Calculator",
+      imgURL:"https://i.postimg.cc/mD80DC2f/TEMP-calculator.png",
+      github:"link",
+      live:"link",
+    techStack:"Html,CSS,Javascript"
+    },
+    {
+      title:"Properties",
+      imgURL:"https://i.postimg.cc/ht4M4j3T/Properties.png",
+      github:"link",
+      live:"link",
+    techStack:"Html,CSS,Javascript"
+    },
+    {
+      title:"Group_App",
+      imgURL:"https://i.postimg.cc/7LQRrDBw/Group-App.png",
+      github:"link",
+      live:"link",
+    techStack:"Vue.js"
+    },
+    {
+      title:"Pokemon Fetch API",
+      imgURL:"https://i.postimg.cc/yxYX1pLB/Pokemon-Fetch-API.png",
+      github:"link",
+      live:"link",
+    techStack:"Html,CSS,JavaScript"
+    },
+    {
+      title:"Christ's Hand",
+      imgURL:"https://i.postimg.cc/G2s4LYyM/Christ-s-hand.png",
+      github:"link",
+      live:"link",
+    techStack:"Html,CSS"
     }
-  }
+    ],
+    active:0 
+    };
+  },
+
+    methods: {
+      On(index){
+        this.active = index
+      }
+    },
 }
 </script>
 
 <style lang="scss">
-section#about{
+section#Projects{
 background-color:#000 ;
 height:95%;
 width: 100vw;
+@media (max-width:1200px) {
+  height:fit-content;
+  
+}
 
 
-.about{
+.Projects{
   width: 100%;
   height: 100%;
   padding: 20px;
+  padding-left: 0;
   margin: auto;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly;
-   .about-img{
+    @media(max-width: 1200px){
+    flex-direction: column;
+    width: fit-content;
+    max-width: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+  }
+  .Projects-img{
+    display: none;
+  }
+   .Projects-img.active{
+    display: block;
     width: 50vw;
     height: 100%;
-      object-fit: cover;
+    object-fit: cover;
+    color: #fff;
+    padding-top:20px ;
+        @media(max-width: 1200px) {
+      width: 100vw;
+      height: 100vw;
+      object-position: center;
+      object-fit: contain;
+      padding: 10px;
+      padding-bottom:6vh ;
+    }
     img{
       width: 100%;
-      height: 100%;
+      height: 90%;
+      
+    }
+    button{
+      padding: 4px;
+      border-radius: 10px;
+      background: #000;
+      color: #fff;
     }
    }
-   .about-text{
+   .Projects-text{
+    position: relative;
     width: 50vw;
     height: 100%;
     max-height: 95vw;
@@ -77,14 +170,68 @@ width: 100vw;
     font-weight: 200;
     overflow-y: scroll;
     padding: 15px;
-    padding-top: 6vw;
-   
+    padding-top: 8vw;
+    display: flex;
+    flex-wrap:wrap ;
+        @media (max-width:1200px) {
+      width: 100vw;
+      height: fit-content;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      max-height: fit-content;
+      
+    }
+    
+    &::before{
+      position:absolute;
+      content:"Projects";
+      font-size:6vw;
+      left: 2px;
+      top: 10px;
+      opacity: 0.7;
+    }
+    .project-card{
+      border:3px solid #fff;
+      padding: 10px;
+      margin:7px;
+      width: fit-content;
+      background-color: gainsboro;
+      color: #000;
+      border-radius: 20px;
+
+      
+      .project-img{
+        width:250px;
+        height: 200Px;
+        border: 5px solid #fff;
+        background-color: #000;
+        img{
+          width: 100%;
+          max-width: fit-content;
+          height: 100%;
+          max-height:fit-content ;
+        }
+      }
+      button{
+        padding: 2px;
+        background: #000;
+        color: #fff;
+        border-radius: 10px;
+        
+        &:hover{
+          background: #fff;
+          color: #000;
+        }
+        }
+
+    }
    }
 }
 
 }
  ::-webkit-scrollbar{
       width: 1rem;
+   
     }
     ::-webkit-scrollbar-track{
     background:rgb(53, 53, 54);
@@ -94,4 +241,9 @@ width: 100vw;
         height: 10px;
         border-radius:20px ;
       }
+         @media(max-width:1200) {
+          ::-webkit-scrollbar{
+         width:0;
+       }
+    }
 </style>

@@ -32,9 +32,9 @@
                     </ul>
                  </div>
              </div>
-             <router-link to="../assets/Lihle Goliath_CV.pdf" download="" >
+            <a href="../assets/Lihle Goliath_CV.pdf" download>
                  <button type="button" class="btn">Download CV</button>
-             </router-link>
+             </a>
     </div>
   
 </div>
@@ -174,6 +174,7 @@ padding-top:20px;
       width: 100vw;
       height: fit-content;
       overflow-y: hidden;
+      overflow-x: hidden;
       max-height: fit-content;
       
     }
@@ -299,14 +300,20 @@ padding-top:20px;
 }
  ::-webkit-scrollbar{
       width: 1rem;
+    
      
     }
     ::-webkit-scrollbar-track{
     background:rgb(53, 53, 54);
+     
       }
       ::-webkit-scrollbar-thumb{
         background: gainsboro;
         height: 10px;
-        border-radius:20px ;
-      }
+       }
+     @media only screen and(max-width:1200px) {
+       ::-webkit-scrollbar{
+      width:0;
+    }
+     }
 </style>

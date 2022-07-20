@@ -263,4 +263,9 @@ width: 100vw;
         height: 10px;
         border-radius:20px ;
       }
+          @media only screen and(max-width:1200px) {
+       ::-webkit-scrollbar{
+      width:0;
+    }
+     }
 </style>
