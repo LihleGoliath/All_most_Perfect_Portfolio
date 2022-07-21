@@ -158,6 +158,7 @@ padding-top:20px;
       width: 100%;
       height: 100%;
       flex-grow: -1;
+      border-radius:50% ;
     }
    }
    .about-text{

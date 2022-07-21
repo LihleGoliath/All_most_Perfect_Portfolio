@@ -28,7 +28,7 @@
 export default{
   data(){
     return{
-      img:'https://i.postimg.cc/zGBsVgSN/IMG-20211019-WA0014-auto-x2.jpg',
+      img:'https://i.postimg.cc/0y8ZTP1V/My-Pic.jpg',
       resumes:[
     {
         date:"2020",
@@ -99,6 +99,7 @@ width: 100vw;
     img{
       width: 100%;
       height: 100%;
+      border-radius:50% ;
     }
    }
    .resume-text{

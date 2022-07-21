@@ -147,9 +147,11 @@ width: 100vw;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
     gap:20px;
      border:2px solid #fff;
     border-radius:20px;
+    
     
      h1{
    text-decoration: underline;
@@ -163,7 +165,7 @@ width: 100vw;
         width: fit-content;
         max-width:250px;
         padding: 5px;
-        text-align: start;
+        text-align: center;
         &:hover{
             background-color: #000;
             color: #fff;

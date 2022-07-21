@@ -7,12 +7,14 @@
     <div class="Testimonials-text">
       <div class="text">
         <h1>{{test.Name}}</h1>
-        <div class="contain">
-          {{test.testimonial}}
+        <div class="con">
+              <button @click="Pervious" class="btn Pervious"><i class="fa-solid fa-arrow-left"></i></button>
+          <div class="contain">
+            {{test.testimonial}}
+          </div>
+               <button @click="Next" class="btn"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
         <p>{{test.occupation}}</p>
-  <button @click="Pervious" class="btn Pervious"><i class="fa-solid fa-arrow-left"></i></button>
-   <button @click="Next" class="btn"><i class="fa-solid fa-arrow-right"></i></button>
       </div>
       </div>
   </div>
@@ -141,6 +143,7 @@ transition: 0.5s ease all;
     img{
       width: 100%;
       height: 100%;
+      border-radius:50% ;
     }
    }
    .Testimonials-text{
@@ -193,7 +196,8 @@ transition: 0.5s ease all;
         background-color: #fff;
         color: #000;
         font-weight: 200;
-        border-radius: 10px;
+        border-radius: 15px;
+        border-bottom-right-radius:0 ;
     
       }
       p{
@@ -214,6 +218,7 @@ transition: 0.5s ease all;
         padding-top:0 ;
         padding-bottom:0;
         font-size:larger;
+        margin: auto;
       }
       .Pervious{
         margin-right:5px;
@@ -223,6 +228,11 @@ transition: 0.5s ease all;
 }
 
 }
+.con{
+  display: flex;
+}
+
+
  ::-webkit-scrollbar{
       width: 1rem;
     }
