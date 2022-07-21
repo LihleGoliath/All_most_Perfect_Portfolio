@@ -36,7 +36,7 @@ export default{
     },
     {
      title:"Calculator",
-     imgURL:"https://i.postimg.cc/G3XKv17Z/Screenshot-2022-04-22-101154.png",
+     imgURL:"https://i.postimg.cc/N0TgXF6b/Calulator.png",
      github:"https://github.com/LihleGoliath/calculator",
      live:"https://cheery-axolotl-7cf81a.netlify.app/",
     techStack:"Html,CSS"
