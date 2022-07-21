@@ -11,6 +11,8 @@
               <button @click="Pervious" class="btn Pervious"><i class="fa-solid fa-arrow-left"></i></button>
           <div class="contain">
             {{test.testimonial}}
+
+            <p>{{test.testimonial1}}</p>
           </div>
                <button @click="Next" class="btn"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
@@ -29,8 +31,9 @@ export default{
        testimonials:[
         {
             Name:"Jason",
-            testimonial:"Lihle never fails to put a smile on your face. He is very welcoming and caring, which are traits that he also applies to his work. He always carries himself in a humble and friendly manner and is a pillar of support among his peers.",
-            occupation:"Lecturer",
+            testimonial:`"Lihle never fails to put a smile on your face. He is very welcoming and caring, which are traits that he also applies to his work. He always carries himself in a humble and friendly manner and is a pillar of support among his peers."   `,
+            testimonial1:`"Lihle is a natural leader, as well as a diligent and dedicated developer. He supports those around him and strives to put out high quality work. Lihle will be a great team lead one day."`,
+           occupation:"Lecturer",
             imgURL:"https://i.postimg.cc/XvKL09s3/Jason-Wandrag.jpg"
         },
         {
