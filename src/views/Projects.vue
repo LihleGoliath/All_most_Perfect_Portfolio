@@ -4,8 +4,8 @@
     <div v-for="(project,index) in projects" :key="index"  class="Projects-img" :class="{active:active === index}">
       <img :src="project.imgURL" alt="">
       <h1>{{project.title}}</h1>
-      <a :href="project.github"><button>Github</button></a>  <a :href="project.live"><button>Live</button> </a>
-      <P>Techstack: {{project.techStack}}</P>
+      <a :href="project.github" target="_black"><button>Github</button></a>  <a :href="project.live" target="_black"><button>Live</button> </a>
+      <P>Tech stack: {{project.techStack}}</P>
     </div>
     <div class="Projects-text">
     <div  v-for="(project,index) in projects" :key="index"  class="project-card" >
@@ -30,64 +30,64 @@ export default{
     {
     title:"Font Gallery",
     imgURL:"https://i.postimg.cc/SQdTV9s1/font-gallery.png",
-    github:"link",
-    live:"link",
+    github:"https://github.com/LihleGoliath/gallery",
+    live:"https://dynamic-gingersnap-5d2507.netlify.app/",
     techStack:"Html,CSS"
     },
     {
      title:"Calculator",
      imgURL:"https://i.postimg.cc/G3XKv17Z/Screenshot-2022-04-22-101154.png",
-     github:"link",
-     live:"link",
+     github:"https://github.com/LihleGoliath/calculator",
+     live:"https://cheery-axolotl-7cf81a.netlify.app/",
     techStack:"Html,CSS"
     },
     {
       title:"Restaurantly",
       imgURL:"https://i.postimg.cc/LXK9y7yS/Screenshot-2022-05-31-115944.png",
-      github:"link",
-      live:"link",
+      github:"https://github.com/LihleGoliath/restaurant_project",
+      live:"https://profound-alpaca-3fa441.netlify.app/",
     techStack:"Html,CSS,Bootstrap"
     },
     {
       title:"BMI Calculator",
       imgURL:"https://i.postimg.cc/ZRRwwgZ2/BMI-calculator.png",
-      github:"link",
-      live:"link",
+      github:"https://github.com/LihleGoliath/BMI_calculator",
+      live:"https://classy-truffle-be8973.netlify.app/",
     techStack:"Html,CSS,JavaScript"
     },
     {
       title:"Temp Calculator",
       imgURL:"https://i.postimg.cc/mD80DC2f/TEMP-calculator.png",
-      github:"link",
-      live:"link",
+      github:"https://github.com/LihleGoliath/Temperature_Calcu-ator",
+      live:"https://delicate-cuchufli-37eab7.netlify.app/",
     techStack:"Html,CSS,Javascript"
     },
     {
       title:"Properties",
       imgURL:"https://i.postimg.cc/ht4M4j3T/Properties.png",
-      github:"link",
-      live:"link",
+      github:"https://github.com/LihleGoliath/js-apartments",
+      live:"https://animated-cascaron-de047e.netlify.app/",
     techStack:"Html,CSS,Javascript"
     },
     {
       title:"Group_App",
       imgURL:"https://i.postimg.cc/7LQRrDBw/Group-App.png",
-      github:"link",
+      github:"https://github.com/siyolisemekuto/group_app",
       live:"link",
     techStack:"Vue.js"
     },
     {
       title:"Pokemon Fetch API",
       imgURL:"https://i.postimg.cc/yxYX1pLB/Pokemon-Fetch-API.png",
-      github:"link",
-      live:"link",
+      github:"https://github.com/LihleGoliath/fetch",
+      live:"https://gorgeous-biscotti-189d83.netlify.app/",
     techStack:"Html,CSS,JavaScript"
     },
     {
       title:"Christ's Hand",
       imgURL:"https://i.postimg.cc/G2s4LYyM/Christ-s-hand.png",
-      github:"link",
-      live:"link",
+      github:"https://github.com/LihleGoliath/net-ninja-book-project/blob/main/index.html",
+      live:"https://enchanting-cucurucho-37c8e6.netlify.app/",
     techStack:"Html,CSS"
     }
     ],
@@ -159,6 +159,10 @@ width: 100vw;
       border-radius: 10px;
       background: #000;
       color: #fff;
+      &:hover{
+        color: royalblue;
+        border: 1px solid royalblue;
+      }
     }
    }
    .Projects-text{

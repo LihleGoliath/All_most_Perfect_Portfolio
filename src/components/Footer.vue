@@ -8,10 +8,10 @@
     <p>Copy Right Of 2022</p>
    </div>
    <div class="icon-links">
-    <i class="fa-brands fa-linkedin"></i>
-    <i class="fa-brands fa-github"></i>
-    <i class="fa-brands fa-codepen"></i>
-    <i class="fa-solid fa-diamond"></i>
+    <a href="https://www.linkedin.com/in/lihle-goliath-355921244/" target="_black"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/LihleGoliath" target="_black"><i class="fa-brands fa-github"></i></a>
+    <a href="https://codepen.io/lihlegoliath" target="_black"><i class="fa-brands fa-codepen"></i></a>
+    <a href="https://app.netlify.com/teams/lihlegoliath/overview" target="_black"><i class="fa-solid fa-diamond"></i></a>
    </div>
     </div>
    
@@ -57,10 +57,15 @@ section#footer{
            display: flex;
            gap:10px;
            color: #fff;
-
+          a{
+            color: #fff;
            i{
             cursor: pointer;
+            &:hover{
+               color:royalblue;
+            }
            }
+          }
          }
       }
 }

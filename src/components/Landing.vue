@@ -4,7 +4,7 @@
     <div class="logo">
         <h1>L</h1>
         <P>Lihle Goliath Aspiring Full Stack Developer</P>
-        <button @click="MoveToAbout" class="btn">More...</button>
+        <router-link to="/about"><button @click="MoveToAbout" class="btn">More...</button></router-link>
     </div>
  </div>
 
@@ -12,6 +12,7 @@
 </template>
 <script>
 export default {
+    
     
 }
 </script>
@@ -52,15 +53,26 @@ export default {
             display: flex;
             flex-direction:column;
             color: gainsboro;
+        
 
             h1{
                 font-size:10vw;
+                width: 100%;
+                max-width:fit-content;
+                margin: auto;
+                height: 100%;
+                max-height: fit-content;
+             
             }
             p{
               color:#fff;
+             
               font-size: 3vw;
               font-weight: 200;
               margin-bottom: 10px;
+            &:hover{
+               background-color:royalblue;
+            }
             }
             
             .btn{

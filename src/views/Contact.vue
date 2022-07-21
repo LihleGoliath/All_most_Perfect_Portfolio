@@ -38,7 +38,7 @@
                   <input type="text" name="Name" class="form-control" placeholder="Your Name" aria-label="First name" required>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" name="Email" class="form-control" placeholder="Your Email" aria-label="Last name" required>
+                  <input type="email" name="Email" class="form-control" placeholder="Your Email" aria-label="Last name" required>
                 </div>
             </div>
                 <div class="subject">
@@ -200,7 +200,7 @@ width: 100vw;
           .col-md-6{
             input{
              background: none;
-             color: #fff;
+             color: #000;
              width: 80%;
              padding: 9px;
              border:none;
@@ -214,7 +214,7 @@ width: 100vw;
           .subject{
             input{
              background: none;
-             color: #fff;
+             color: #000;
              width: 80%;
              padding: 9px;
              border:none;
@@ -228,7 +228,7 @@ width: 100vw;
 
             textarea{
             background: none;
-             color: #fff;
+             color: #000;
              width: 80%;
              padding: 9px;
              border:none;

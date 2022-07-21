@@ -15,13 +15,15 @@ export default{
 }
 </script>
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap');
 #app {
   position: fixed;
   width: 100%;
   max-width: 100vw;
   height: 100%;
   max-height: 100vw;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+ font-family: 'Lora', serif;
+font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

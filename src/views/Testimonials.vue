@@ -33,7 +33,7 @@ export default{
         },
         {
             Name:"Siyolise",
-            testimonial:"Goliath is not afraid to make an impression. He is outspoken and pleasently socail with his colleagues. He takes every opportunity to learn and showcase his passion with both hands",
+            testimonial:"Goliath is not afraid to make an impression. He is outspoken and pleasantly social with his colleagues. He takes every opportunity to learn and showcase his passion with both hands",
             occupation:"Co-student",
             imgURL:`https://i.postimg.cc/xdTz1r0R/Copy-of-Siyolise-3-min.jpg`
         },
@@ -168,7 +168,7 @@ transition: 0.5s ease all;
       
     }
      &::before{
-    content: "Testmonials";
+    content: "Testimonials";
     position: absolute;
     font-size:6vw;
     left:2px;
