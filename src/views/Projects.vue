@@ -8,14 +8,33 @@
       <P>Tech stack: {{project.techStack}}</P>
     </div>
     <div class="Projects-text">
-    <div  v-for="(project,index) in projects" :key="index"  class="project-card" >
-    <div class="project-img">
-     <img :src="project.imgURL" alt=""/>
-    </div>
-      <h3>{{project.title}}</h3>
-    <button @click="On(index)">Full View</button>
-      
-    </div>
+      <div class="filter">
+        <select name="TechStack" id="TechStack"  v-model="value" @change="FilteringProjects()">
+          <option value="" >All</option>
+          <option value="Html,CSS">Html,CSS</option>
+          <option value="Html,CSS,Bootstrap">Html,CSS,Bootstrap</option>
+          <option value="Html,CSS,Javascript">Html,CSS,Javascript</option>
+          <option value="Vue.js">Vue.js</option>
+        </select>
+      </div>
+      <div class="project">
+
+        <div  v-show="filtering" v-for="(project,index) in FilteredProjects" :key="index"  class="project-card" >
+        <div class="project-img">
+         <img :src="project.imgURL" alt=""/>
+        </div>
+          <h3>{{project.title}}</h3>
+        <button @click="On(index)"><i class="fa-solid fa-eye"></i></button>
+        </div>
+         <div v-show="!filtering" v-for="(project,index) in projects" :key="index"  class="project-card" >
+        <div class="project-img">
+         <img :src="project.imgURL" alt=""/>
+        </div>
+          <h3>{{project.title}}</h3>
+        <button @click="On(index)"><i class="fa-solid fa-eye"></i></button>
+          
+        </div>
+      </div>
       </div>
   </div>
 
@@ -88,22 +107,41 @@ export default{
       imgURL:"https://i.postimg.cc/G2s4LYyM/Christ-s-hand.png",
       github:"https://github.com/LihleGoliath/net-ninja-book-project/blob/main/index.html",
       live:"https://enchanting-cucurucho-37c8e6.netlify.app/",
-    techStack:"Html,CSS"
+    techStack:"Html,CSS,Bootstrap"
     }
     ],
-    active:0 
+    active:0 ,
+    value:"",
+    FilteredProjects:[],
+    filtering:false
     };
   },
 
     methods: {
       On(index){
         this.active = index
-      }
+      },  
+      FilteringProjects(){
+        
+        if(this.value ===  ""){
+          return this.FilteredProjects = this.projects
+         
+        }else{
+          this.FilteredProjects = this.projects?.filter((project) => {
+           return project.techStack.toLocaleLowerCase().includes(this.value.toLocaleLowerCase()) 
+          });
+          this.filtering=true;
+          return;
+        }
+        }
     },
-}
+
+      }
+    
+
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 section#Projects{
 background-color:#000 ;
 height:95%;
@@ -176,7 +214,7 @@ width: 100vw;
     padding: 15px;
     padding-top: 8vw;
     display: flex;
-    flex-wrap:wrap ;
+    flex-direction: column;
         @media (max-width:1200px) {
       width: 100vw;
       height: fit-content;
@@ -249,5 +287,31 @@ width: 100vw;
           ::-webkit-scrollbar{
          width:0;
        }
+    }
+
+    i{
+      font-size: 1vw;
+    }
+    .project{
+      display: flex;
+      flex-wrap:wrap;
+      width: 100%;
+    }
+
+    #TechStack{
+      padding: 8px;
+      padding-bottom:3px;
+      margin-bottom:15px ;
+      font-size: 2vh;
+      border:none;
+      background: none;
+      color: #fff;
+      border-bottom:2px solid #fff;
+      text-transform: uppercase;
+      text-align: center;
+      option{
+       color: #000;
+
+      }
     }
 </style>
