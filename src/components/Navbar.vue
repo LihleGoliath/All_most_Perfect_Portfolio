@@ -133,8 +133,9 @@ header{
           font-size: 10px;
 
           &:hover{
-            background-color: rgba(55, 55, 199, 0.94);
-            border: 1px solid #fff;
+            color: rgba(55, 55, 199, 0.94);
+            border-bottom: 2px solid rgba(55, 55, 199, 0.94);
+     
           }
         }
         .active{
