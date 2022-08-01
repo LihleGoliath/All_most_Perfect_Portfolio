@@ -79,7 +79,7 @@ export default {
  
      ScreenChecker(){
       this.windowWidth = window.innerWidth
-      if(this.windowWidth <= 750){
+      if(this.windowWidth <= 1000){
         this.mobile = true;
         return;
       }else{

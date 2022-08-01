@@ -1,5 +1,10 @@
 <template>
  <section id="landing">
+    <transition
+    
+    enter-active-class="animate__animated animate__slideInUp"
+    leave-active-class="animate__animated animate__fadeOutUp"
+    >
  <div class="img">
     <div class="logo">
         <h1>L</h1>
@@ -8,6 +13,7 @@
     </div>
  </div>
 
+ </transition>
  </section>
 </template>
 <script>

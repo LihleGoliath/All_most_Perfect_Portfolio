@@ -1,6 +1,8 @@
-<template>
+<template >
 <Navbar/>
+
   <router-view></router-view>
+
   <Footer/>
 </template>
 <script>
@@ -38,12 +40,16 @@ font-family: 'Poppins', sans-serif;
   max-height: max-content;
 
  }
+ html{
+  background-color: black;
+ }
 
 }
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --animate-delay: 2s;
 }
 
 @media only screen and (max-width: 1200px) {

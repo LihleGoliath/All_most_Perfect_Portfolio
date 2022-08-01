@@ -1,6 +1,6 @@
 <template>
-<section id="about">
-  <div class="about">
+<section id="about" >
+  <div class="about ">
     <div class="about-img">
       <img :src="img" alt="">
     </div>
