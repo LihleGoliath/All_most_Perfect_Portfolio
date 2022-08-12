@@ -1,10 +1,7 @@
 <template>
  <section id="landing">
-    <transition
-    
-    enter-active-class="animate__animated animate__slideInUp"
-    leave-active-class="animate__animated animate__fadeOutUp"
-    >
+  
+ 
  <div class="img">
     <div class="logo">
         <h1>L</h1>
@@ -13,7 +10,7 @@
     </div>
  </div>
 
- </transition>
+
  </section>
 </template>
 <script>
@@ -43,16 +40,6 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: circle 2s infinite ;
-        
-         
-         @keyframes circle {
-            0%{
-                rotate: 0deg;
-            }
-            100%{
-                rotate: 360deg;
-            }
             
          }
          .logo{
@@ -94,5 +81,5 @@ export default {
          }
      }
 
-   } 
+   
 </style>
